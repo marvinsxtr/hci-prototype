@@ -255,3 +255,46 @@ nav{
 .icon{
   pointer-events: none;
 }
+
+/* ToDo list */
+.todoWrapper{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  border:1px solid #808e9b;
+  text-align: center;
+  
+}
+
+.todoHeader{
+  
+}
+
+.todoList{
+  list-style: none;
+}
+
+.todoListElem{
+  cursor: pointer;
+  width: auto;
+  text-align: right;
+  margin: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 25px;
+  border:1px solid #808e9b;
+}
+
+.todoListElemText{
+  float: left;
+}
+
+input[type="checkbox"]{
+  position: relative;
+}
+input[type="checkbox"]:checked + label{
+	text-decoration: line-through;
+	color: rgba(0,0,0,.3);
+}

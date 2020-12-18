@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
   <title>Group</title>
 </head>
+
 <body>
   <!-- NAVBAR -->
   <nav>
@@ -113,8 +115,39 @@
       </div>
 
       <!-- ToDo -->
-      <div class="text" id="todosdiv">
-        notes
+      <div class="text" id="tododiv" style="display: block;">
+        <div class="todoWrapper">
+          <div class="todoHeader">
+            Noch zu erledigen für AB 5:
+          </div>
+
+          <div class="todoList">
+            <div class="todoListElem">
+              <input type="checkbox" id="check-1">
+              <label class="todoListElemText" for="check-1">
+                Ergebnisse Aus Aufgabe 1 überprüfen
+              </label>
+            </div>
+            <div class="todoListElem">
+              <input type="checkbox" id="check-2">
+              <label class="todoListElemText" for="check-2">
+                Zeichnung für Aufgabe 4 a) erstellen
+              </label>
+            </div>
+            <div class="todoListElem">
+              <input type="checkbox" id="check-3">
+              <label class="todoListElemText" for="check-3">
+                Im Forum nachfragen wie 4 b) gemeint ist
+              </label>
+            </div>
+            <div class="todoListElem">
+              <input type="checkbox" id="check-4">
+              <label class="todoListElemText" for="check-4">
+                Git repo erstellen
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -122,4 +155,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../js/group.js"></script>
 </body>
+
 </html>
