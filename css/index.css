@@ -86,7 +86,10 @@ nav * {
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 25%;
+}
+
+.nav-links li{
+  margin-inline: 20px;
 }
 
 .nav-links li{
@@ -157,10 +160,16 @@ nav * {
   width: 100%;
 }
 
-.popup .content a{
+.button-main {
   width: 50%;
   background-color: rgb(0, 121, 26);
   color: #fff;
+  padding: 10px;
+}
+
+.button-sec {
+
+  color: black;
 }
 
 .popup .content *{
