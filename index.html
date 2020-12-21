@@ -11,6 +11,25 @@
 </head>
 <body>
 
+  <!-- Login popup dialog -->
+  <div  href="#" id="popup1" class="overlay">
+    <div class="popup">
+      <h2>Login</h2>
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <p>Username or Email</p>
+        <input type="text" value="max.mustermann@uni-hannover.de"></input>
+        <p>Password</p>
+        <input type="password" value="secret"></input>
+        <div style="text-align: center;" >
+          <a class="button" style="padding: 10px;" href="html/group.html">
+              Login
+          </a>
+      </div>
+      </div>
+    </div>
+  </div>
+
   <!-- NAVBAR -->
   <nav>
     <div class="logonav">
@@ -18,7 +37,7 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a style="whitespace=nowrap">Sign up</a>
+        <a  href="#popup1">Log In</a>
       </li>
       <li>
         <a>Register</a>
@@ -30,8 +49,8 @@
   <div class="text">
       <p class="logo">Finda</p>
       <p class="desc">Discover new ways to meet even more study buddie's</p>
-      <a class="button" href="html/group.html">
-        Get started
+      <a class="button" style="padding: 10px;" href="html/group.html">
+        Login to Get started
         <i class="fa fa-paper-plane icon"></i>
       </a>
   </div>
