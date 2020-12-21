@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../css/group.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../js/group.js"></script>
   <title>Group</title>
 </head>
 
@@ -107,7 +109,14 @@
       </div>
 
       <!-- Chat -->
-      <div class="text" id="chatdiv"></div>
+      <div class="text" id="chatdiv">
+        <div id="chat-message-container" class="main-border">
+        </div>
+        <div id="chat-send-container">
+          <input id="chat-send-message" type="text" placeholder="Type a message" />
+          <input id="chat-send-button" type="button" value="Send" onclick="sendChatMessage()"/>
+        </div>
+      </div>
 
       <!-- Calendar -->
       <div class="text" id="calendardiv">
@@ -152,8 +161,7 @@
 
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="../js/group.js"></script>
+
 </body>
 
 </html>

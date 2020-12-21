@@ -11,6 +11,14 @@ function showContent(content) {
   $('#' + content + 'div').show();
 }
 
+function sendChatMessage() {
+  let message = $("#chat-send-message").val();
+  $("#chat-send-message").val("");
+
+  $("#chat-message-container").append(message)
+}
+
+
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
@@ -19,5 +27,6 @@ const navSlide = () => {
     nav.classList.toggle('nav-active');
   });
 }
+
 
 navSlide();

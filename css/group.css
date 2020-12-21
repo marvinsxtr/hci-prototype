@@ -238,8 +238,29 @@ nav{
   height: 100%;
   margin: 10px;
   margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-message-container {
+  padding: 25px;
+  flex: 1;
+}
+
+#chat-send-container {
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+}
+
+#chat-send-message {
+  flex: 1;
+}
+
+.main-border {
   border: solid 1px #808e9b;
   border-radius: 25px;
+  padding: 25px;
 }
 
 #calendardiv {
