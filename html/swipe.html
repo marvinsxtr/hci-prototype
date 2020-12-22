@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <script src="../js/swipe.js"></script>
   <title>Swipe</title>
 </head>
@@ -88,7 +89,52 @@
 
     <!-- CONTENT -->
     <div class="content">
-      Swipe
+      <div class="row">
+        <div class="column">
+          <h2>Declined</h2>
+        </div>
+        <div class="column">
+          <div class="finda-container">
+            <div class="finda-status">
+              <i class="fa fa-remove"></i>
+              <i class="fa fa-heart"></i>
+            </div>
+            <div class="finda-cards">
+              <div class="finda-card">
+                <img src="https://placeimg.com/600/300/people">
+                <h3>Stadtpuff</h3>
+                <p>Fach: HCI</p>
+                <p>Beschreibung: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+              </div>
+              <div class="finda-card">
+                <img src="https://placeimg.com/600/300/animals">
+                <h3>?????</h3>
+                <p>Fach: HCI</p>
+                <p>Beschreibung: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+              </div>
+              <div class="finda-card">
+                <img src="https://placeimg.com/600/300/nature">
+                <h3>Gruppe XY</h3>
+                <p>Fach: HCI</p>
+                <p>Beschreibung: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+              </div>
+              <div class="finda-card">
+                <img src="https://placeimg.com/600/300/tech">
+                <h3>Power Rangers</h3>
+                <p>Fach: HCI</p>
+                <p>Beschreibung: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+              </div>
+            </div>
+            <div class="finda-buttons">
+              <button id="nope"><i class="fa fa-remove"></i></button>
+              <button id="love"><i class="fa fa-heart"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h2>Requested</h2>
+        </div>
+      </div>
     </div>
   </div>
 
