@@ -213,12 +213,6 @@ nav{
   color: #808e9b;
 }
 
-.content{
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .main-border {
   border: solid 1px #808e9b;
   border-radius: 25px;
@@ -227,4 +221,173 @@ nav{
 
 .icon{
   pointer-events: none;
+}
+
+/*CONTENT*/
+
+.content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 100vh;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*FINDA CARDS*/
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.finda-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.loaded.finda-container {
+  opacity: 1;
+}
+
+.finda-status {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.finda-status i {
+  font-size: 100px;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+}
+
+.finda_love .fa-heart {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.finda_nope .fa-remove {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.finda-cards {
+  flex-grow: 0.9;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+  padding-top: 0px;
+}
+
+.finda-card {
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90vw;
+  max-width: 400px;
+  height: 60vh;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.moving.finda-card {
+  transition: none;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.finda-card img {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.finda-card h3 {
+  margin-top: 32px;
+  font-size: 32px;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.finda-card p {
+  margin-top: 24px;
+  font-size: 20px;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.finda-buttons {
+  flex: 0 0 100px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.finda-buttons button {
+  border-radius: 50%;
+  line-height: 60px;
+  width: 60px;
+  border: 0;
+  background: #FFFFFF;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.finda-buttons button:focus {
+  outline: 0;
+}
+
+.finda-buttons i {
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.fa-heart {
+  color: #FFACE4;
+}
+
+.fa-remove {
+  color: #CDD6DD;
 }
