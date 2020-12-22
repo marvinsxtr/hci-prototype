@@ -45,19 +45,19 @@ nav{
 }
 
 .search{
-  width: auto;
-  height: auto;
+  width: 100%;
   padding: 5px;
   padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   border: #808e9b 1px solid;
   border-radius: 25px;
 }
 
 .search input{
-  width: auto;
+  width: 100%;
   margin-left: 10px;
-  width: 80%;
   border: 0;
 }
 
@@ -69,7 +69,7 @@ nav{
   .nav-links{
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 80px;
     top: 8vh;
     width: 15%;
     background-color: #01a3a4;
@@ -79,10 +79,6 @@ nav{
     justify-content: flex-start;
     transform: translateX(100%);
     transition: 0.3s ease-in;
-  }
-
-  .nav-links a{
-    padding: 2vh;
   }
 
   .burger{
@@ -120,17 +116,19 @@ nav{
 .circle img{
   width: 100%;
   height: 100%;
+  
   border-radius: 50%;
+
 }
 
 .page{
   display: flex;
+  align-items: stretch;
   flex-direction: row;
 }
 
 .groups{
-  width: 20%;
-  height: 92vh;
+  width: 75px;
   border-right: #f1f2f6 2px solid;
 }
 
@@ -142,9 +140,10 @@ nav{
 }
 
 .group{
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: center;
+  vertical-align: middle 
 }
 
 .groupname{
@@ -181,11 +180,35 @@ nav{
     font-size: 10px;
   }
 
+  .groups{
+    width: 300px;
+  }
+
 }
 
 .group-links li{
-  margin: 2vh;
+  margin: 15px;
   list-style: none;
+  cursor: pointer;
+  width: auto;
+  display: flex;
+}
+
+.group-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in;
+
+}
+
+.group-box:hover {
+  transition: background-color 0s;
+  background-color: #e9e9e9;
+
 }
 
 .search a{
@@ -230,7 +253,7 @@ nav{
 }
 
 .content{
-  width: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
