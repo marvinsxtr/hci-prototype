@@ -1,20 +1,4 @@
-let groups = [
-  {
-    "name": "Stadtpuff",
-    "members": "Leonard, Marvin, Jansan, Til, Andre",
-    "icon": "../assets/image.jpeg"
-  },
-  {
-    "name": "?????",
-    "members": "Nils, Ruwen, Kalobi, Ilkay, Kafe",
-    "icon": "../assets/group2.jpeg"
-  },
-  {
-    "name": "Group XY",
-    "members": "Lea, Nele, Gerry",
-    "icon": "../assets/group3.jpeg"
-  }
-]
+let groups = 
 
 current_group = null
 
@@ -49,15 +33,11 @@ const navSlide = () => {
 }
 
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  navSlide();
-
+function displayGroups(groups) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   
-  selected_group = -1
+  selected_group = 0
 
   if (urlParams.has("group_id"))
     selected_group = urlParams.get("group_id")
@@ -82,5 +62,15 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   $("#group-name").text(current_group.name)
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  navSlide();
+
+  $.getJSON("../assets/groups.json", function (json) {
+    displayGroups(json)
+  });
+
+  
   
 });
