@@ -116,14 +116,11 @@ nav{
 .circle img{
   width: 100%;
   height: 100%;
-  
   border-radius: 50%;
-
 }
 
 .page{
   display: flex;
-  align-items: stretch;
   flex-direction: row;
 }
 
@@ -202,7 +199,6 @@ nav{
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.1s ease-in;
-
 }
 
 .group-box:hover {
