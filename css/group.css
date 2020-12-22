@@ -191,6 +191,10 @@ nav{
   display: flex;
 }
 
+.group-selected {
+  background-color: #b3ffff;
+}
+
 .group-box {
   width: 100%;
   display: flex;
