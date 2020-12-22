@@ -81,10 +81,6 @@ nav{
     transition: 0.3s ease-in;
   }
 
-  .nav-links a{
-    padding: 2vh;
-  }
-
   .burger{
     display: block;
     color: #f1f2f6;
@@ -226,8 +222,7 @@ nav{
 /*CONTENT*/
 
 .content{
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }

@@ -97,6 +97,42 @@ function setupCards() {
   love.addEventListener('click', loveListener);
 }
 
-window.onload = function() {
-  setupCards();
+function displayCards(groups) {
+  groups.forEach((g, i) => {
+    $("#cards-container").append(`
+      <div class="finda-card">
+        <img src="${g.image}">
+        <h3>${g.name}</h3>
+        <p>Fach: ${g.subject}</p>
+        <p>Beschreibung: ${g.description}</p>
+      </div>
+    `)
+  })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  $.getJSON("../assets/discovery-groups.json", function (json) {
+    displayCards(json)
+    setupCards();
+  });
+
+  $.getJSON("../assets/groups.json", function (json) {
+    displayGroups(json)
+  });
+});
+
+function displayGroups(groups) {
+  groups.forEach((g, i) => {
+    $("#group-selector").append(`
+      <a  href="group.html?group_id=${i}" class="group-box"> 
+        <div class="circle">
+          <img src="${g.icon}">
+        </div>
+        <div class="group">
+          <p class="groupname">${g.name}</p>
+          <p class="members">${g.members}</p>
+        </div>
+      </a>
+    `)
+  })
 }

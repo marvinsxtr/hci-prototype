@@ -1,5 +1,3 @@
-let groups = 
-
 current_group = null
 
 $("ul.buttonGroup").click(function (event) {

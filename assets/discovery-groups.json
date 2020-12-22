@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Stadtpuff",
+        "image": "https://placeimg.com/600/300/people",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+        "subject": "HCI"
+    },
+    {
+        "name": "?????",
+        "image": "https://placeimg.com/600/300/animals",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+        "subject": "HCI"
+    },
+    {
+        "name": "Gruppe XY",
+        "image": "https://placeimg.com/600/300/nature",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+        "subject": "HCI"
+    },
+    {
+        "name": "Power Rangers",
+        "image": "https://placeimg.com/600/300/tech",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+        "subject": "HCI"
+    }
+]
