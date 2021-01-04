@@ -1,13 +1,5 @@
 current_group = null
 
-$("ul.buttonGroup").click(function (event) {
-    var item= $("li", this)
-    .removeClass("selected")
-    .filter(event.target);
-    item.addClass("selected");
-    showContent(item.attr('id'));
-});
-
 function showContent(content) {
   $('.text').hide();
   $('#' + content + 'div').show();
@@ -69,6 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
     displayGroups(json)
   });
 
-  
+  $("ul.buttonGroup").click(function (event) {
+    var item= $("li", this)
+    .removeClass("selected")
+    .filter(event.target);
+    item.addClass("selected");
+    showContent(item.attr('id'));
+  });
   
 });
