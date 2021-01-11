@@ -22,16 +22,6 @@ const navSlide = () => {
   });
 }
 
-const groupSlide = () => {
-  const burger = document.querySelector('.burgerGroups');
-  const groups = document.querySelector('.groups');
-
-  burger.addEventListener('click', ()=>{
-    groups.classList.toggle('groups-active');
-  });
-}
-
-
 function displayGroups(groups) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -65,7 +55,6 @@ function displayGroups(groups) {
 
 document.addEventListener("DOMContentLoaded", () => {
   navSlide();
-  groupSlide();
 
   $.getJSON("../assets/groups.json", function (json) {
     displayGroups(json)
