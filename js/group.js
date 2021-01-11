@@ -12,6 +12,9 @@ function sendChatMessage() {
   $("#chat-message-container").append(message)
 }
 
+function checkTodo(element) {
+  element.children[0].checked = !element.children[0].checked
+}
 
 const navSlide = () => {
   const burger = document.querySelector('.burger');
@@ -67,5 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
     item.addClass("selected");
     showContent(item.attr('id'));
   });
-
+  
 });

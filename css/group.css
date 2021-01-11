@@ -421,6 +421,7 @@ nav{
 
 .todoListElemText{
   float: left;
+  cursor: pointer;
 }
 
 input[type="checkbox"]{
