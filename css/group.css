@@ -426,6 +426,7 @@ nav{
 
 input[type="checkbox"]{
   position: relative;
+  pointer-events: none
 }
 input[type="checkbox"]:checked + label{
 	text-decoration: line-through;
