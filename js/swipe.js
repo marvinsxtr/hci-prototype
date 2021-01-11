@@ -117,11 +117,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   $.getJSON("../assets/groups.json", function (json) {
-    displayGroups(json)
+    loaded_groups = json
+    displayGroups(loaded_groups)
   });
+
+  $("#sidebarSearch").on("input", searchQueryChanged);
 });
 
+loaded_groups = null
+
+function searchQueryChanged(event) {
+  if (loaded_groups === null)
+    return;
+  
+  query = $("#sidebarSearch").val().toLowerCase()
+  filtered_groups = loaded_groups.filter(group => group.name.toLowerCase().includes(query))
+
+  displayGroups(filtered_groups)
+}
+
 function displayGroups(groups) {
+  $("#group-selector").empty()
   groups.forEach((g, i) => {
     $("#group-selector").append(`
       <a  href="group.html?group_id=${i}" class="group-box"> 
@@ -136,3 +152,4 @@ function displayGroups(groups) {
     `)
   })
 }
+
