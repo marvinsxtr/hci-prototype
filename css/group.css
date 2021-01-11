@@ -69,8 +69,8 @@ nav{
   .nav-links{
     position: absolute;
     right: 0px;
-    height: 80px;
-    top: 8vh;
+    height: calc(100vh - 65px);
+    top: 65px;
     width: 15%;
     background-color: #01a3a4;
     display: flex;
@@ -79,6 +79,10 @@ nav{
     justify-content: flex-start;
     transform: translateX(100%);
     transition: 0.3s ease-in;
+  }
+
+  .nav-links li{
+    margin: 10px;
   }
 
   .burger{
@@ -90,6 +94,10 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .search input{
+    display: none;
   }
 }
 
@@ -127,6 +135,7 @@ nav{
 .groups{
   width: 75px;
   border-right: #f1f2f6 2px solid;
+  height: calc(100vh - 65px);
 }
 
 .group-links{
@@ -192,7 +201,7 @@ nav{
 }
 
 .group-selected {
-  background-color: #b3ffff;
+  background-color: rgba(1, 163, 164, 0.4);
 }
 
 .group-box {
