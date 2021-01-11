@@ -2,6 +2,9 @@ current_group = null
 
 loaded_groups = null
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
 function showContent(content) {
   $('.text').hide();
   $('#' + content + 'div').show();
@@ -57,8 +60,7 @@ const navSlide = () => {
 }
 
 function displayGroups(groups, filtered) {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
+
 
   selected_group = 0
 
@@ -111,7 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
     showContent(item.attr('id'));
   });
   
-  receiveChatMessage("Hey, can someone help me solve assignment 1 😅")
+
+
+  if (urlParams.has("group_id") && urlParams.get("group_id") == 0)
+    receiveChatMessage("Hey, can someone help me solve assignment 1? 😅")
 
 
   $("#sidebarSearch").on("input", searchQueryChanged);
