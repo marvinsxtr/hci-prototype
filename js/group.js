@@ -7,11 +7,23 @@ function showContent(content) {
   $('#' + content + 'div').show();
 }
 
+msg_id = 0
+
 function sendChatMessage() {
   let message = $("#chat-send-message").val();
   $("#chat-send-message").val("");
 
-  $("#chat-message-container").append("<p class='ownChatMessage'>" + message + "</p>")
+  $("#chat-message-container").append("<p class='sendChatMessage'>" + message + "</p>")
+
+  if (msg_id == 0) {
+    setTimeout(function(){ receiveChatMessage("Thank you! 😊"); }, 3000);
+  }
+
+  msg_id++
+}
+
+function receiveChatMessage(msg) {
+  $("#chat-message-container").append("<p class='receivedChatMessage'>" + msg +"</p>")
 }
 
 function checkTodo(element) {
@@ -99,9 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showContent(item.attr('id'));
   });
   
-  $("#chat-message-container").append("<p class='receivedChatMessage'>Test</p>")
-  $("#chat-message-container").append("<p class='sendChatMessage'>Test</p>")
-  $("#chat-message-container").append("<p class='sendChatMessage'>Test2</p>")
+  receiveChatMessage("Hey, can someone help me solve assignment 1 😅")
 
 
   $("#sidebarSearch").on("input", searchQueryChanged);
