@@ -437,6 +437,8 @@ input[type="checkbox"]:checked + label{
   background-color: #01a3a4;
   margin-top: 15px;
   margin-right: 50%;
+  border-radius: 25px;
+  padding-left: 15px;
 }
 
 .sendChatMessage {
@@ -444,10 +446,14 @@ input[type="checkbox"]:checked + label{
   background-color: #00addf;
   margin-top: 15px;
   margin-left: 50%;
+  border-radius: 25px;
+  padding-right: 15px;
 }
 
 .ownChatMessage {
   background-color: #01a3a4;
   margin-top: 15px;
   margin-right: 50%;
+  border-radius: 25px;
+  padding-left: 15px;
 }
