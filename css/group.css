@@ -435,9 +435,19 @@ input[type="checkbox"]:checked + label{
 
 .receivedChatMessage {
   background-color: #01a3a4;
+  margin-top: 15px;
+  margin-right: 50%;
 }
 
 .sendChatMessage {
   text-align: right;
   background-color: #00addf;
+  margin-top: 15px;
+  margin-left: 50%;
+}
+
+.ownChatMessage {
+  background-color: #01a3a4;
+  margin-top: 15px;
+  margin-right: 50%;
 }
