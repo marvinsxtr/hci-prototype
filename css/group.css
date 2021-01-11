@@ -44,6 +44,11 @@ nav{
   cursor: pointer;
 }
 
+.burgerGroups{
+  display: none;
+  cursor: pointer;
+}
+
 .search{
   width: 100%;
   padding: 5px;
@@ -61,16 +66,78 @@ nav{
   border: 0;
 }
 
+.groups{
+  width: 75px;
+  border-right: #f1f2f6 2px solid;
+  height: calc(100vh - 65px);
+}
+
+.group-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.group{
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle
+}
+
+.groupname{
+  display: none;
+  color: #01a3a4;
+  margin-left: 10px;
+}
+
+.group-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px;
+  cursor: pointer;
+  width: auto;
+}
+
+.group-box:hover {
+  background-color: #e9e9e9;
+}
+
+.members{
+  display: none;
+  color: #808e9b;
+  margin-left: 10px;
+}
+
 @media screen and (max-width:768px) {
   body{
     overflow-x: hidden;
   }
 
+  .groups{
+    position: absolute;
+    left: 0px;
+    height: calc(100vh - 65px);
+    top: 65px;
+    width: 25%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in;
+  }
+
+
   .nav-links{
     position: absolute;
     right: 0px;
-    height: 80px;
-    top: 8vh;
+    height: calc(100vh - 65px);
+    top: 65px;
     width: 15%;
     background-color: #01a3a4;
     display: flex;
@@ -86,6 +153,11 @@ nav{
     color: #f1f2f6;
   }
 
+  .burgerGroups{
+    display: block;
+    color: #f1f2f6;
+  }
+
   .search{
     flex-direction: column;
     justify-content: center;
@@ -94,6 +166,10 @@ nav{
 }
 
 .nav-active{
+  transform: translateX(0%);
+}
+
+.groups-active{
   transform: translateX(0%);
 }
 
@@ -124,36 +200,6 @@ nav{
   flex-direction: row;
 }
 
-.groups{
-  width: 75px;
-  border-right: #f1f2f6 2px solid;
-}
-
-.group-links{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.group{
-  display: inline-block;
-  flex-direction: column;
-  justify-content: center;
-  vertical-align: middle 
-}
-
-.groupname{
-  display: none;
-  color: #01a3a4;
-  margin-left: 10px;
-}
-
-.members{
-  display: none;
-  color: #808e9b;
-  margin-left: 10px;
-}
 
 @media screen and (min-width:1024px) {
   .group-links{
@@ -192,23 +238,7 @@ nav{
 }
 
 .group-selected {
-  background-color: #b3ffff;
-}
-
-.group-box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.1s ease-in;
-}
-
-.group-box:hover {
-  transition: background-color 0s;
-  background-color: #e9e9e9;
-
+  background-color: rgba(1, 163, 164, 0.4);
 }
 
 .search a{
@@ -391,7 +421,7 @@ nav{
 }
 
 .todoHeader{
-  
+
 }
 
 .todoList{

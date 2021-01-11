@@ -22,11 +22,20 @@ const navSlide = () => {
   });
 }
 
+const groupSlide = () => {
+  const burger = document.querySelector('.burgerGroups');
+  const groups = document.querySelector('.groups');
+
+  burger.addEventListener('click', ()=>{
+    groups.classList.toggle('groups-active');
+  });
+}
+
 
 function displayGroups(groups) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  
+
   selected_group = 0
 
   if (urlParams.has("group_id"))
@@ -37,9 +46,9 @@ function displayGroups(groups) {
     console.log(i)
     if (selected_group == i)
       current_group = g
-    
+
     $("#group-selector").append(`
-      <a  href="group.html?group_id=${i}" class="group-box ${selected_group == i ? "group-selected": ""}"> 
+      <a  href="group.html?group_id=${i}" class="group-box ${selected_group == i ? "group-selected": ""}">
         <div class="circle">
           <img src="${g.icon}">
         </div>
@@ -56,6 +65,7 @@ function displayGroups(groups) {
 
 document.addEventListener("DOMContentLoaded", () => {
   navSlide();
+  groupSlide();
 
   $.getJSON("../assets/groups.json", function (json) {
     displayGroups(json)
@@ -68,5 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
     item.addClass("selected");
     showContent(item.attr('id'));
   });
-  
+
 });
