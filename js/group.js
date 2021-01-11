@@ -9,11 +9,16 @@ function sendChatMessage() {
   let message = $("#chat-send-message").val();
   $("#chat-send-message").val("");
 
-  $("#chat-message-container").append(message)
+  $("#chat-message-container").append("<p class='ownChatMessage'>" + message + "</p>")
 }
 
 function checkTodo(element) {
   element.children[0].checked = !element.children[0].checked
+}
+
+function chatKeyDown(event) {
+  if (event.keyCode == 13)
+    sendChatMessage()
 }
 
 const navSlide = () => {
@@ -63,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     displayGroups(json)
   });
 
+  $("#chat-send-message").keydown(chatKeyDown)
+
   $("ul.buttonGroup").click(function (event) {
     var item= $("li", this)
     .removeClass("selected")
@@ -71,4 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showContent(item.attr('id'));
   });
   
+  $("#chat-message-container").append("<p class='receivedChatMessage'>Test</p>")
+  $("#chat-message-container").append("<p class='sendChatMessage'>Test</p>")
+  $("#chat-message-container").append("<p class='sendChatMessage'>Test2</p>")
 });

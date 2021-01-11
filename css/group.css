@@ -431,3 +431,12 @@ input[type="checkbox"]:checked + label{
 	text-decoration: line-through;
 	color: rgba(0,0,0,.3);
 }
+
+.receivedChatMessage {
+  background-color: #01a3a4;
+}
+
+.sendChatMessage {
+  text-align: right;
+  background-color: #00addf;
+}
